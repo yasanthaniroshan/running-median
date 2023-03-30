@@ -17,3 +17,27 @@ double median(vector<int> array, int n) {
     }
     return median;
 }
+
+vector<int> sort(vector<int> array, int size) {
+    int i = 0;
+    while (i < size) {
+        int j = i + 1;
+        while (j < size) {
+            if (array[i] > array[j]) {
+                int temp_value = array[i];
+                array[i] = array[j];
+                array[j] = temp_value;
+            }
+            j++;
+        }
+        i++;
+    }
+    return array;
+}
+
+void printing_array(vector<int> array, int size) {
+    for (int i = 0; i < size; i++) {
+        cout << array[i] << " ";
+    }
+    cout << endl;
+}
